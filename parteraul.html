@@ -36,6 +36,18 @@
         let datee = new Date("2021-05-25");
         document.getElementById("f1t1").value = "Estos son los milisegundos desde la fecha "+ datee.getDate()+"/"+datee.getMonth()+"/"+datee.getFullYear() +" : " + datee.getTime() + " milisegundos";
     }
+
+    function setMilliseconds(x){
+        fecha.setMilliseconds(x);
+        document.getElementById("f1t1").value = "Modificamos los milisegundos a "+ x +" y quedarían: "+ fecha.getMilliseconds(x) + " milisegundos.";
+    }
+
+    function setTime(x){
+        fecha.setTime(x);
+        document.getElementById("f1t1").value = "Estos son los milisegundos pasados por parámetro: "+ x +" y quedaria: " + fecha.getTime(x) + " milisegundos";
+    }
+
+
 </script>
 <body>
     <div class="p-5 d-flex flex-column justify-content-center align-items-center" style="color: white;">
@@ -46,6 +58,8 @@
             <button type="button" class="m-3 btn btn-primary" onclick="getMilliseconds()">getMilliseconds( )</button>
             <button type="button" class="m-3 btn btn-primary" onclick="getTime()">getTime( )</button>
             <button type="button" class="m-3 btn btn-primary" onclick="getTime2()">getTime2( )</button>
+            <button type="button" class="m-3 btn btn-primary" onclick="setMilliseconds(20)">setMilliseconds(20)</button>
+            <button type="button" class="m-3 btn btn-primary" onclick="setTime(1900)">setTime(1900)</button>
         </div>
     </div>
 </body>
