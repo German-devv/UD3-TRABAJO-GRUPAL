@@ -16,35 +16,28 @@
 </style>
 <script type='text/javascript'>
     let fecha = new Date;
+    console.log(fecha);
 
-    // Devuelve un número entre 0 y 59;
     function getDay(){
-        document.getElementById("f1t1").value = "Este es el dia actual: "+ fecha.getDay();
+        document.getElementById("f1t1").value = "Este es el dia de la semana: "+ fecha.getDay();
     }
 
-    // Devuelve un número entre 0 y 999;
     function getHours(){
-        document.getElementById("f1t1").value = "Estos son las horas de este día: "+ fecha.getHours() + " horas.";
+        document.getElementById("f1t1").value = "Estos son las horas: "+ fecha.getHours() + " horas.";
     }
 
-    // Devuelve el número de milisegundos desde la época, que se define como la medianoche del comienzo del 1 de enero de 1970, UTC.
     function getSeconds(){
-        document.getElementById("f1t1").value = "Estos son los segundos desde la época (la medianoche del del 1 de enero de 1970): "+ fecha.getSeconds() + " segundos.";
-    }
-
-    function setDay(x){
-        fecha.setDay(x);
-        document.getElementById("f1t1").value = "Modificamos los dias a "+ x +" y quedarían: "+ fecha.getDay(x) + " dias";
+        document.getElementById("f1t1").value = "Estos son los segundos: "+ fecha.getSeconds() + " segundos.";
     }
 
     function setHours(x){
         fecha.setHours(x);
-        document.getElementById("f1t1").value = "Modificamos las horas a "+ x +" y quedarían: "+ fecha.getHours(x) + " horas";
+        document.getElementById("f1t1").value = "Modificamos las horas a "+ x +" y quedarían: "+ fecha.getHours() + " horas";
     }
 
     function setSeconds(x){
         fecha.setSeconds(x);
-        document.getElementById("f1t1").value = "Modificamos los segundos a "+ x +" y quedarían: "+ fecha.getSeconds(x) + " segundos";
+        document.getElementById("f1t1").value = "Modificamos los segundos a "+ x +" y quedarían: "+ fecha.getSeconds() + " segundos";
     }
 
 
@@ -57,7 +50,6 @@
             <button type="button" class="m-3 btn btn-primary" onclick="getDay()">getDay( )</button>
             <button type="button" class="m-3 btn btn-primary" onclick="getHours()">getHours( )</button>
             <button type="button" class="m-3 btn btn-primary" onclick="getSeconds()">getSeconds( )</button>
-            <button type="button" class="m-3 btn btn-primary" onclick="setDay()">getTime2( )</button>
             <button type="button" class="m-3 btn btn-primary" onclick="setHours(20)">setHours(20)</button>
             <button type="button" class="m-3 btn btn-primary" onclick="setSeconds(1900)">setSeconds(1900)</button>
             <a href="index.html" class="m-3 btn btn-primary">Volver al index</a>
