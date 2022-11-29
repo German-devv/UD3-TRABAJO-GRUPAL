@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let fecha = new Date;
+
+        function getAño() {
+
+            alert("El año es " + fecha.getFullYear())//Retorna el año que tiene el objeto
+            console.log(fecha)
+
+        }
+
+        function getMes() {
+
+            alert("El mes es " + fecha.getMonth())//Retorna el mes que tiene el objeto 
+            console.log(fecha) 
+
+        }
+
+        function getFecha() {
+
+            alert("El día del mes es " + fecha.getDate())//Retorna el día del mes que tiene el objeto    
+            console.log(fecha)
+
+        }
+
+        function setAño(x) {
+
+            fecha.setFullYear(x)//mMdifica el año que tiene el objeto
+            alert("Ahora el año es " + fecha.getFullYear())
+            console.log(fecha)
+
+        }
+
+        function setMes(x) {
+
+            fecha.setMonth(x)//Modifica el mes que tiene el objeto  
+            alert("Ahora el mes es " + fecha.getMonth())
+            console.log(fecha)
+
+        }
+
+        function setFecha(x) {
+    
+            fecha.setDate(x)//Modifica el día del mes que tiene el objeto 
+            alert("Ahora el día del mes es " + fecha.getDate())  
+            console.log(fecha) 
+
+        }
+
+
+
+    </script>
+
+    <button onclick="getAño()">getFullYear</button> <br> <br>
+    <button onclick="getMes()">getMonth</button> <br> <br>
+    <button onclick="getFecha()">getDate</button> <br> <br>
+
+    <button onclick="setAño(2001, 2, 3)">setFullYear(2001, 2, 3)</button> <br> <br>
+    <button onclick="setAño(2005)">setFullYear(2005)</button> <br> <br>
+    <button onclick="setMes(6)">setMonth(6)</button> <br> <br>
+    <button onclick="setFecha(12)">setDate(12)</button> <br> <br>
+    <button onclick="setFecha(fecha.getDate() + 30)">setDate(getDate() + 30)</button> <br> <br>
+
+
+
+
+</body>
+
+</html>
